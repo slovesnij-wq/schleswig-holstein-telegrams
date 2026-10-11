@@ -1,0 +1,5 @@
+search
+known_solve
+__pycache__/
+*.pyc
+.DS_Store

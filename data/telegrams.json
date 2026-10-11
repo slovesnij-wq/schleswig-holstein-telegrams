@@ -1,0 +1,58 @@
+{
+  "about": "Four encrypted telegrams sent in 1939 by Günther Dabis to his wife Käthe in Kiel. Ciphertexts and headers transcribed from the scans published by Klaus Schmeh (Cipherbrain, 2017 and 2021). 'handwritten' is the plaintext Käthe Dabis wrote on the form; 'plaintext' is the 55-letter text Dabis actually enciphered (recovered with the key). Positions are 0-based.",
+  "sources": [
+    "https://scienceblogs.de/klausis-krypto-kolumne/2017/09/02/who-can-decipher-this-encrypted-telex-from-a-famous-battle-ship/",
+    "https://scienceblogs.de/klausis-krypto-kolumne/2021/01/03/drei-weitere-ungeloeste-verschluesselte-nachrichten-vom-kriegsschiff-schleswig-holstein/",
+    "https://scienceblogs.de/klausis-krypto-kolumne/three-more-unsolved-ciphertexts-from-the-battle-ship-schleswig-holstein"
+  ],
+  "telegrams": {
+    "1": {
+      "form": "Marinenachrichtendienst, no. 1106 (collection of Tobias Schrödel)",
+      "header": "+BEZ MAPRIFU SCHL HOLSTEIN 11 15 5/1 1828= DABIS HOHENRADE 42 KIEL=",
+      "sent": "1939-01-05 18:28", "received": "1939-01-06 02:26",
+      "ciphertext": "ZASUG RNGSE LNHET NLLUI TDSEE OCBAU AMTXU DBNAN NEUFX SPSRR UDLTH",
+      "handwritten": null,
+      "plaintext": "ZURGROSSENSTUNDEHALSUNDBEINBRUCHUNDXGLATTENSTAPELLAUFMX",
+      "plaintext_words": "ZUR GROSSEN STUNDE HALS UND BEINBRUCH UND X GLATTEN STAPELLAUF M X",
+      "key": "0931276845",
+      "transmission_errors": [],
+      "notes": "Never read before. Second letter of group NLLUI is a faint L on the scan; E would give HAES instead of HALS. X after UND is a separator; the final M X are most likely fillers to reach 55 letters (the words take 52)."
+    },
+    "2": {
+      "form": "Marinenachrichtendienst, no. 3248 (collection of Patrick Hayes)",
+      "header": "+BEZ MAPRIFU SCHL HOLSTEIN 17 15 11/1 2000= DABIS HOHENRADE 42 KIEL=",
+      "sent": "1939-01-11 20:00", "received": "1939-01-12 13:--",
+      "ciphertext": "BXLTU LBEEI LRKSH GUNRI NLSAE DIAKN RLTUU AMMBC EEIKO BIUEE DUIFS",
+      "handwritten": "liebste kleine frau bin so glücklich u. dankbar es lebe murks u. die mutti",
+      "plaintext": "LIBSTEKLEINEFRAUBINSOGLUKLICHUDANKBARESLEBEMURXUDIEMUTI",
+      "plaintext_words": "LIBSTE KLEINE FRAU BIN SO GLUKLICH U DANKBAR ES LEBE MURX U DIE MUTI",
+      "key": "1093276548",
+      "transmission_errors": [{"positions": [42, 43], "sent": "IK", "by_key": "KI", "kind": "adjacent letters swapped"}],
+      "notes": "BXLTU is the first of the 11 cipher groups, not a header. Dabis shortened four words to fit 55 letters; Käthe wrote them in full (60 letters)."
+    },
+    "3": {
+      "form": "Marinenachrichtendienst, no. 14806 (collection of Patrick Hayes)",
+      "header": "+BEZ MAPRIFU SCHL HOLSTEIN 23 15 16/2 1940= DABES HOHENRADE 42 KIEL=",
+      "sent": "1939-02-16 19:40", "received": "1939-02-16 22:--",
+      "ciphertext": "RSLON ZESPH GSGFT HIAAB SANSS EUTAL ILRRF ATFHE UEELD AURFH USSEO",
+      "handwritten": "Bisher ahnungslos. fein das alles gut. stolz auf tapfere Frau",
+      "plaintext": "BISHERAHNUNGSLOSFEINDASSALLESGUTSEHRSTOLZAUFTAPFEREFRAU",
+      "plaintext_words": "BISHER AHNUNGSLOS FEIN DASS ALLES GUT SEHR STOLZ AUF TAPFERE FRAU",
+      "key": "2193076458",
+      "transmission_errors": [{"positions": [49], "sent": "H", "by_key": "N", "kind": "letter garbled"}],
+      "notes": "Käthe's note omits SEHR and writes DAS for DASS (50 letters)."
+    },
+    "4": {
+      "form": "Deutsche Reichspost telegram, filed at Flensburg, no. 36 (collection of Patrick Hayes)",
+      "header": "36 FLENSBURG F 16 13 2015 = DABIS HOHENRADE 42 KL = ... = DABIS +",
+      "sent": "1939-03-13 20:15", "received": "1939-03-13 20:32",
+      "ciphertext": "CETJN RFLUU KIEIB DIHVD AARDV EIMEN RNMLL EINRR HVOIH OROXE IEOFE",
+      "handwritten": "kleine blonde frau noch viele Jahre mit dir viele frohe murx von dir",
+      "plaintext": "KLEINEBLONDEFRAUNOCHVILEJAHREMITDIRVILEFROHEMURXEVONDIR",
+      "plaintext_words": "KLEINE BLONDE FRAU NOCH VILE JAHRE MIT DIR VILE FROHE MURXE VON DIR",
+      "key": "1590276348",
+      "transmission_errors": [{"positions": [36], "sent": "I", "by_key": "L", "kind": "letter garbled"}],
+      "notes": "Dabis wrote VILE (twice) and MURXE (plural); Käthe wrote viele, viele, murx (56 letters). The signature DABIS is outside the cipher."
+    }
+  }
+}
