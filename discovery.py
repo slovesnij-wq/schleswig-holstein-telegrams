@@ -9,7 +9,7 @@ subsets of lines) and compare with shuffled plaintexts (same letters, random ord
 Figures: the triangle 1+2+...+10 (read by columns), the 5 x 11 table (read by columns) and
 the 11 x 5 table (read by columns).
 
-  python discovery.py [N_SHUFFLES]
+  python discovery.py [N_SHUFFLES]      (default 1000)
 """
 import sys, random
 from collections import Counter
@@ -40,7 +40,7 @@ def misfit(ct, pt, lines):
     return dp[-1]
 
 def main():
-    ns = int(sys.argv[1]) if len(sys.argv) > 1 else 20
+    ns = int(sys.argv[1]) if len(sys.argv) > 1 else 1000
     T = load(); rng = random.Random(7)
     for k in ('3', '4', '2'):
         ct, pt = T[k]['ct'], T[k]['plaintext']
@@ -48,7 +48,7 @@ def main():
         for name, lines in figures().items():
             real = misfit(ct, pt, lines)
             noise = sorted(misfit(ct, ''.join(rng.sample(pt, N)), lines) for _ in range(ns))
-            print(f'   {name:24s} misfit letters: {real:2d}    shuffled plaintext ({ns}x): min {noise[0]}, median {noise[ns // 2]}')
+            print(f'   {name:24s} misfit letters: {real:2d}    shuffled plaintext ({ns}x): min {noise[0]}, median {noise[ns // 2]}, max {noise[-1]}')
         print()
 
 if __name__ == '__main__':

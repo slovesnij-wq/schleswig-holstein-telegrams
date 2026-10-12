@@ -62,7 +62,7 @@ What you should see:
 3. **`checks.py blind`.** Without any plaintext, scoring every decryption with a German quadgram model puts the correct key first for all four telegrams (No. 3 and No. 4 lead the runner-up by 23 points).
 4. **`checks.py control 30`.** 29 of 30 synthetic German 55-letter texts with random keys are solved the same way.
 5. **`checks.py null 100`.** For 100 shuffles of the letters of No. 1, the best of all 10! keys is gibberish with a score of −284.2 (median) and −274.6 at most. The real No. 1 scores −228.8, far outside the noise. (The gap between the first and second key is not a useful statistic: on shuffles it reaches 12.8.)
-6. **`discovery.py`.** Cut the ciphertext into consecutive blocks with the letters of whole triangle columns (ignoring the order inside each column): No. 2, No. 3 and No. 4 leave 0, 1 and 1 letters unplaced; shuffled plaintexts leave 21 or more. The 5 × 11 and 11 × 5 tables are at noise level. Earlier attempts read the triangle along fixed routes; the key also shuffles the rows inside each column, so every fixed route fails.
+6. **`discovery.py`.** Cut the ciphertext into consecutive blocks with the letters of whole triangle columns (ignoring the order inside each column): No. 2, No. 3 and No. 4 leave 0, 1 and 1 letters unplaced; 1000 shuffled plaintexts leave 22–24 (median) and never fewer than 17. The 5 × 11 and 11 × 5 tables are at noise level. Earlier attempts read the triangle along fixed routes; the key also shuffles the rows inside each column, so every fixed route fails.
 
 ## Why Käthe's notes do not match letter for letter
 
