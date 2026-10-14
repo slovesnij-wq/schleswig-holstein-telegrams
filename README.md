@@ -10,6 +10,10 @@ This repository contains the recovered system, the four keys, the plaintexts and
 
 [Русская версия](README.ru.md)
 
+[![Animation: the triangle cipher on a test sentence, the check on No. 3 and the first reading of No. 1](media/triangle_en.gif)](media/triangle_en.mp4)
+
+*How the triangle works: a test sentence, the check on No. 3 and the first reading of No. 1 (49 s; full-resolution video: [media/triangle_en.mp4](media/triangle_en.mp4)).*
+
 ## Result
 
 | No. | Sent | Key | Text as enciphered by Dabis | Translation |
@@ -99,6 +103,7 @@ On top of this, each of No. 2–4 has the single transmission defect listed abov
 | `checks.py` | blind search, control on synthetic texts, noise on shuffled ciphertexts |
 | `discovery.py` | column-composition test for the triangle and two tables |
 | `lm/quad.f32`, `lm/heldout.txt`, `lm/build_lm.py` | German quadgram model, held-out control sentences, rebuild script |
+| `media/` | animation of the method (GIF for this page, 1920 × 1080 MP4), English and Russian |
 
 ## Data and licences
 
